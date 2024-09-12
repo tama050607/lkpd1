@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sd, #smp, #sma {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="pendidikan">Pendidikan</label>
+        <select name="pendidikan" id="pendidikan" onchange="showOptions()">
+            <option value="">Pilih</option>
+            <option value="sd">SD</option>
+            <option value="smp">SMP</option>
+            <option value="sma">SMA</option>
+        </select>
+    </form>
+
+    <label for="sd">Tingkat Sekolah</label>
+    <select name="" id="sd">
+        <option value="">Pilih</option>
+        <option value="sd">Kelas 1</option>
+        <option value="sd">Kelas 2</option>
+        <option value="sd">Kelas 3</option>
+        <option value="sd">Kelas 4</option>
+        <option value="sd">Kelas 5</option>
+        <option value="sd">Kelas 6</option>
+    </select>
+
+    <label for="smp"></label>
+    <select name="" id="smp">
+        <option value="">Pilih</option>
+        <option value="smp">Kelas 7</option>
+        <option value="smp">Kelas 8</option>
+        <option value="smp">Kelas 9</option>
+    </select>
+
+    <label for="sma"></label>
+    <select name="" id="sma">
+        <option value="">Pilih</option>
+        <option value="sma">Kelas 10</option>
+        <option value="sma">Kelas 11</option>
+        <option value="sma">Kelas 12</option>
+    </select>
+
+    <script>
+        function showOptions() {
+            var pendidikan = document.getElementById("pendidikan").value;
+            
+            document.getElementById("sd").style.display = "none";
+            document.getElementById("smp").style.display = "none";
+            document.getElementById("sma").style.display = "none";
+
+            if (pendidikan === "sd") {
+                document.getElementById("sd").style.display = "block";
+            } else if (pendidikan === "smp") {
+                document.getElementById("smp").style.display = "block";
+            } else if (pendidikan === "sma") {
+                document.getElementById("sma").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
